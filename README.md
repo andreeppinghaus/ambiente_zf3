@@ -1,3 +1,11 @@
+Ambiente de desenvolvimento em PHP-7 e Zend Framework 3
+
+O Zend é um Framework desenvolvido pela empresa Zend(http://www.zend.com/) para criação de sistemas Web.
+
+Atualmente o Zend Framework está versão 3.0 e, na criação deste repositório (20/05/2019), está sendo transferido para ser um projeto oficial da Linux Foundation com o novo nome Laminas (https://getlaminas.org/).
+
+Para uma nova imagem, crie um arquivo chamado Dockerfile em uma pasta com o seguite conteúdo:
+
 FROM alpine
 
 RUN apk update 
@@ -46,3 +54,31 @@ EXPOSE 80
 
 ##Roda o script para inicializacao dos servicos
 CMD ["/start.sh"]
+
+## Fim de arquivo
+
+
+
+Com o docker devidamente instalado, no shell de comnandos do seu sistema operacional digite os seguintes comandos, com o ponto (.) no final:
+
+sudo docker build -t suaimagem .
+
+
+Verifique as imagens no seu docker:
+
+sudo docker images
+
+Rode a imagem
+sudo docker run -it suaimagem 
+
+Acesso via navegador:
+
+Abra um navegador e digite o ip : http://172.17.0.2
+
+Acesso via postgres acessando 
+
+sudo su - postgres
+
+psql -h 172.17.0.2
+
+

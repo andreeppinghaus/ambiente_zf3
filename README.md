@@ -22,7 +22,7 @@ RUN echo "display_errors = On">> /etc/php7/php.ini
 RUN mkdir /run/postgresql
 RUN chown postgres.postgres /run/postgresql/
 
-## criando os servicos de inicializacao
+##criando os servicos de inicializacao
 #instala o services
 RUN apk add openrc --no-cache
 
@@ -55,7 +55,7 @@ EXPOSE 80
 ##Roda o script para inicializacao dos servicos
 CMD ["/start.sh"]
 
-## Fim de arquivo
+##Fim de arquivo
 
 
 

@@ -1,9 +1,11 @@
-Ambiente de desenvolvimento em PHP-7 e Zend Framework 3
+# Ambiente de desenvolvimento em PHP-7 e Zend Framework 3
+
 
 O Zend é um Framework desenvolvido pela empresa Zend(http://www.zend.com/) para criação de sistemas Web.
 
 Atualmente o Zend Framework está versão 3.0 e, na criação deste repositório (20/05/2019), está sendo transferido para ser um projeto oficial da Linux Foundation com o novo nome Laminas (https://getlaminas.org/).
 
+# Ambiente utilizando Docker
 Para uma nova imagem, crie um arquivo chamado Dockerfile em uma pasta com o seguite conteúdo:
 
 FROM alpine
@@ -81,4 +83,25 @@ sudo su - postgres
 
 psql -h 172.17.0.2
 
+# Ambiente com uma maquina virtual Linux
 
+Este ambiente é um Linux Fedora 30 com todo ambiente de desenvolvimento instalado e configurado para trabalhar com o Zend Framework 3.
+
+Usuários:
+Usuário Admin
+Login: admin
+Senha: admin
+
+Usuário Postgres do banco de dados PostgreSQL
+Login: postgres
+Senha: postgres
+
+Softwares instalados:
+Firefox;
+Chrome;
+Eclipse-PDT para desenvolvimento em PHP
+pgAdmin 3 para acesso ao banco de dados postgres
+composer para adicionar pacotes no Zend 3
+
+
+Arquivo do virtualbox fedora30.vdi
